@@ -49,6 +49,11 @@ export default {
                     'only_labels',
                     'strip_ifdo',
                 ],
+                'VideoPagure': [
+                    'newest_label',
+                    'only_labels',
+                    'strip_ifdo',
+                ],            
             },
             options: {
                 annotation_session_id: null,

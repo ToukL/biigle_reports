@@ -46,3 +46,6 @@
 <div class="help-block" v-if="wantsCombination('VideoIfdo', '')">
     The iFDO report returns the iFDO file that was attached to a volume with added information about annotations and video labels. See the <a target="_blank" href="https://www.marine-imaging.com/fair/ifdos/iFDO-overview">iFDO specification for more information</a>.
 </div>
+<div class="help-block" v-if="wantsCombination('VideoPagure', '')">
+    The Pagure custom report returns an iFDO file that was attached to a volume with added information about annotations and video labels, customized for Pagure use.</a>.
+</div>

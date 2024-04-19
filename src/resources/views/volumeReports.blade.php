@@ -32,8 +32,8 @@
             <form v-on:submit.prevent="submit">
                 <div class="form-group">
                     <label>Report type</label>
-                    <div class="btn-group btn-group-justified">
-                        @if ($volume->isImageVolume())
+                    @if ($volume->isImageVolume())
+                        <div class="btn-group btn-group-justified">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default" title="Request an annotation report" v-on:click="selectType('ImageAnnotations')" :class="{active: wantsType('ImageAnnotations')}">Image annotation report</button>
                             </div>
@@ -47,7 +47,10 @@
                                     <button type="button" class="btn btn-default" title="iFDO reports are only available for volumes with attached iFDO files" disabled>Image iFDO report</button>
                                 @endif
                             </div>
-                        @else
+                        </div>
+                    @else
+                        <!-- <div class="btn-group"> -->
+                        <div class="btn-group btn-group-justified">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default" title="Request a video annotation report" v-on:click="selectType('VideoAnnotations')" :class="{active: wantsType('VideoAnnotations')}">Video annotation report</button>
                             </div>
@@ -61,8 +64,11 @@
                                     <button type="button" class="btn btn-default" title="iFDO reports are only available for volumes with attached iFDO files" disabled>Video iFDO report</button>
                                 @endif
                             </div>
-                        @endif
-                    </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default" title="Request a Pagure custom video report" v-on:click="selectType('VideoPagure')" :class="{active: wantsType('VideoPagure')}">Video Pagure report</button>
+                        </div>
+                    @endif
                 </div>
                 <div class="form-group" :class="{'has-error': errors.id}">
                     <div v-if="hasAvailableVariants">

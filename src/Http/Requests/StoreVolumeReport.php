@@ -55,6 +55,7 @@ class StoreVolumeReport extends StoreReport
                 ReportType::videoAnnotationsCsvId(),
                 ReportType::videoLabelsCsvId(),
                 ReportType::videoIfdoId(),
+                ReportType::videoPagureId(),
             ];
         }
 
@@ -108,6 +109,7 @@ class StoreVolumeReport extends StoreReport
             $ifdoTypes = [
                 ReportType::imageIfdoId(),
                 ReportType::videoIfdoId(),
+                ReportType::videoPagureId(),
             ];
 
             if ($this->isType($ifdoTypes) && !$this->volume->hasIfdo()) {

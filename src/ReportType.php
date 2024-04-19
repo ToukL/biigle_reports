@@ -33,6 +33,7 @@ class ReportType extends Model
         'videoAnnotationsCsv' => 'VideoAnnotations\Csv',
         'videoIfdo' => 'VideoIfdo',
         'videoLabelsCsv' => 'VideoLabels\Csv',
+        'videoPagure' => 'VideoPagure',
     ];
 
     /**
